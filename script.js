@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Tempatkan seluruh kode JavaScript Anda di sini
   // Ambil elemen-elemen yang dibutuhkan
+  
   const hireModal = document.getElementById("hireModal");
   const hireForm = document.getElementById("hireForm");
   const openModalButton = document.querySelector('a[href="#Hire Me"]');
@@ -32,5 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Setelah formulir dikirim, sembunyikan modal
     hireModal.style.display = "none";
+    const hireModal = document.getElementById('hireModal');
+const hireForm = document.getElementById('hireForm');
+const openModalButton = document.getElementById('hireMeButton'); // Perhatikan perubahan ini
+const closeModalButton = document.querySelector('.close');
+
   });
 });
