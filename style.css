@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+/* https://integratedfolks.com */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  background: #f5f5fc;
+  overflow: auto;
+}
+
+/* Scrollbar start */
+::-webkit-scrollbar {
+  width: 11px;
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background: #081b29;
+  border-radius: 5px;
+}
+/* Scrollbar End */
+
+/* Header CSS start */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 200;
+  transition: 0.5s ease-in;
+}
+.header.sticky {
+  background: #fff;
+}
+.logo {
+  font-size: 2rem;
+  color: #0072ff;
+  font-weight: 400;
+  padding: 0 10%;
+}
+.navbar {
+  padding-right: 70px;
+}
+.navbar a {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  color: #081b29;
+  font-weight: 400;
+  font-size: 18px;
+  transition: 0.4s ease;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: #0072ff;
+}
+.navbar a::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid #0072ff;
+  transition: 0.4s ease;
+}
+.navbar a:hover::before,
+.navbar a.active::before {
+  width: 100%;
+}
+.menu {
+  display: none;
+}
+/* Header CSS end */
+/* Home Section CSS Start  */
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 10%;
+  overflow: hidden;
+}
+.home::after {
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  top: 10%;
+  left: 30%;
+  background: linear-gradient(45deg, #085bff, #09f3ff);
+  animation: animateObj1 4s linear infinite;
+}
+.home::before {
+  position: absolute;
+  content: "";
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  top: 40%;
+  left: -12%;
+  background: linear-gradient(45deg, #085bff, #09f3ff);
+  animation: animateObj2 4s linear infinite;
+}
+@keyframes animateObj1 {
+  50% {
+    top: 50px;
+  }
+}
+@keyframes animateObj2 {
+  50% {
+    top: 200px;
+  }
+}
+.cols {
+  width: 50%;
+}
+.falltop {
+  z-index: 100;
+}
+.cols .topline {
+  display: block;
+  letter-spacing: 2px;
+  color: #081b29;
+  font-size: 25px;
+  font-weight: 300;
+}
+.cols h1 {
+  display: block;
+  font-size: 3em;
+  font-weight: 900;
+  color: #081b29;
+}
+.multitext {
+  color: #0072ff;
+  text-transform: capitalize;
+}
+.cols p {
+  width: 90%;
+  font-size: 20px;
+  color: #081b29;
+  font-weight: 200;
+  display: block;
+  padding: 10px;
+}
+.div-btn {
+  width: 245px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+.div-btn a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #081b29;
+  padding: 15px;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 4px 3px 10px #9ea3a7;
+  transition: 0.5s;
+}
+.div-btn a:hover,
+.div-btn a:nth-child(2) {
+  background: #0072ff;
+}
+.div-btn a:nth-child(2):hover {
+  background: #081b29;
+}
+.imgbx {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.imgbx img {
+  position: relative;
+  height: 100%;
+  width: calc(110% - 60px);
+  top: 15px;
+  animation: animateUser 4s linear infinite;
+}
+/* Tambahkan ini ke dalam CSS Anda */
+.multitext i.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animateUser {
+  50% {
+    top: 30px;
+  }
+}
